@@ -223,6 +223,40 @@ h2.section-title {
   color: var(--text-muted);
 }
 
+.book-feature {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.8rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.book-feature img {
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+.book-feature-text {
+  flex: 1 1 300px;
+}
+
+.book-feature-text h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.book-feature-text p {
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
 .drivers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
