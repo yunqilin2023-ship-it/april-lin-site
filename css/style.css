@@ -122,7 +122,7 @@ main {
   width: 380px;
   height: 380px;
   background: var(--powder-pale);
-  bottom: -220px;
+  top: 193px;
   right: -100px;
 }
 
