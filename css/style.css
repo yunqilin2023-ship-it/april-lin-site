@@ -148,28 +148,35 @@ main {
 .days-alive-badge {
   position: absolute;
   left: 50%;
-  bottom: -22px;
+  bottom: -20px;
   transform: translateX(-50%);
   background: var(--white);
   border-radius: 999px;
-  box-shadow: var(--shadow);
-  padding: 0.7rem 1.3rem;
-  text-align: center;
+  box-shadow: 0 10px 20px rgba(43, 42, 40, 0.15), 0 2px 4px rgba(43, 42, 40, 0.08);
+  padding: 0.6rem 1.4rem;
   white-space: nowrap;
   border: 1px solid var(--blush-pale);
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
 }
 
 .days-alive-badge .days-alive-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
   color: var(--text-muted);
 }
 
 .days-alive-badge .days-alive-number {
   font-family: "Noto Serif TC", serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--blush-deep);
+  letter-spacing: 0.02em;
+  background: linear-gradient(135deg, var(--blush-deep), var(--powder-deep));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .hero .tagline {
