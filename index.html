@@ -43,6 +43,11 @@
     </div>
     <div class="hero-photo">
       <img src="assets/portrait-1.jpg" alt="林筠騏 April Lin">
+      <div class="days-alive-badge">
+        <div class="days-alive-label">來到地球第</div>
+        <div class="days-alive-number" id="days-alive-number">—</div>
+        <div class="days-alive-label">天</div>
+      </div>
     </div>
   </section>
 
@@ -82,6 +87,14 @@
 </footer>
 
 <script>
+  (function () {
+    var birthDate = new Date(1970, 8, 15); // 1970年9月15日
+    var now = new Date();
+    var msPerDay = 86400000;
+    var daysAlive = Math.floor((now - birthDate) / msPerDay);
+    document.getElementById('days-alive-number').textContent = daysAlive.toLocaleString('zh-Hant-TW');
+  })();
+
   fetch('data/daily-facts.json')
     .then(function (res) { return res.json(); })
     .then(function (facts) {

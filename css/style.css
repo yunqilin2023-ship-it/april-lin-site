@@ -133,6 +133,7 @@ main {
 .hero .hero-photo {
   flex: 0 0 auto;
   width: 260px;
+  position: relative;
 }
 
 .hero .hero-photo img {
@@ -142,6 +143,33 @@ main {
   display: block;
   object-fit: cover;
   aspect-ratio: 3 / 4;
+}
+
+.days-alive-badge {
+  position: absolute;
+  left: 50%;
+  bottom: -22px;
+  transform: translateX(-50%);
+  background: var(--white);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  padding: 0.7rem 1.3rem;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid var(--blush-pale);
+}
+
+.days-alive-badge .days-alive-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.days-alive-badge .days-alive-number {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--blush-deep);
 }
 
 .hero .tagline {
