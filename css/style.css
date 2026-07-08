@@ -369,6 +369,36 @@ h2.section-title {
   margin-bottom: 0.6rem;
 }
 
+.daily-fact {
+  background: linear-gradient(135deg, var(--powder-pale), var(--blush-pale));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 2.2rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.daily-fact .daily-fact-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--powder-deep);
+  margin-bottom: 0.5rem;
+}
+
+.daily-fact .daily-fact-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.daily-fact .daily-fact-text {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  color: var(--ink);
+  font-family: "Noto Serif TC", serif;
+}
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

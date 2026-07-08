@@ -46,6 +46,12 @@
     </div>
   </section>
 
+  <section class="daily-fact">
+    <div class="daily-fact-label">每日一知識</div>
+    <div class="daily-fact-date" id="daily-fact-date"></div>
+    <div class="daily-fact-text" id="daily-fact-text">載入中…</div>
+  </section>
+
   <section>
     <h2 class="section-title">最新動態</h2>
     <div class="news-grid">
@@ -74,6 +80,22 @@
 <footer>
   © 林筠騏 April Lin ｜ <a href="mailto:yunqilin2023@gmail.com">yunqilin2023@gmail.com</a>
 </footer>
+
+<script>
+  fetch('data/daily-facts.json')
+    .then(function (res) { return res.json(); })
+    .then(function (facts) {
+      var now = new Date();
+      var start = new Date(now.getFullYear(), 0, 0);
+      var dayOfYear = Math.floor((now - start) / 86400000);
+      var fact = facts[dayOfYear % facts.length];
+      document.getElementById('daily-fact-date').textContent = (now.getMonth() + 1) + '月' + now.getDate() + '日';
+      document.getElementById('daily-fact-text').textContent = fact.text;
+    })
+    .catch(function () {
+      document.getElementById('daily-fact-text').textContent = '今日知識載入失敗，稍後再試。';
+    });
+</script>
 
 </body>
 </html>
